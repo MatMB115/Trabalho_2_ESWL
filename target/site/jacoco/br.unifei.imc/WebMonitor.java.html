@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WebMonitor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">br.unifei.imc</a> &gt; <span class="el_source">WebMonitor.java</span></div><h1>WebMonitor.java</h1><pre class="source lang-java linenums">package br.unifei.imc;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+<span class="fc" id="L6">public class WebMonitor {</span>
+
+    public String addUser(String name, String password, String email, String admin) {
+
+<span class="fc bfc" id="L10" title="All 6 branches covered.">        if (!verifyName(name) || !verifyPassword(password) || !verifyEmail(email)</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">                || !verifyAdmin(admin)) {</span>
+<span class="fc" id="L12">            return &quot;Cadastro Inválido&quot;;</span>
+        }
+<span class="fc" id="L14">        return &quot;Cadastro Válido&quot;;</span>
+    }
+
+    public Boolean verifyName(String name) {
+<span class="pc bpc" id="L18" title="1 of 4 branches missed.">        if (name.length() &lt; 5 || name.length() &gt; 30) {</span>
+<span class="fc" id="L19">            return false;</span>
+        }
+        // Verify if has only letters or spaces
+<span class="fc" id="L22">        String regex = &quot;^[\\p{L} .'-]+$&quot;;</span>
+
+<span class="fc" id="L24">        Pattern pattern = Pattern.compile(regex);</span>
+
+<span class="fc" id="L26">        Matcher matcher = pattern.matcher(name);</span>
+
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (!matcher.matches()) {</span>
+<span class="fc" id="L29">            return false;</span>
+        }
+
+<span class="fc" id="L32">        return true;</span>
+    }
+
+    public Boolean verifyPassword(String password) {
+<span class="pc bpc" id="L36" title="1 of 4 branches missed.">        if (password.length() &lt; 8 || password.length() &gt; 25) {</span>
+<span class="fc" id="L37">            return false;</span>
+        }
+
+        // Verify if has at least one number/letter/special character
+<span class="fc" id="L41">        String regex = &quot;^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&amp;+=!])(?=\\S+$).{8,25}$&quot;;</span>
+
+<span class="fc" id="L43">        Pattern pattern = Pattern.compile(regex);</span>
+
+<span class="fc" id="L45">        Matcher matcher = pattern.matcher(password);</span>
+
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (!matcher.matches()) {</span>
+<span class="fc" id="L48">            return false;</span>
+        }
+
+<span class="fc" id="L51">        return true;</span>
+    }
+
+    public Boolean verifyEmail(String email) {
+
+<span class="fc" id="L56">        String regex = &quot;^(.+)@(.+)$&quot;;</span>
+
+<span class="fc" id="L58">        Pattern pattern = Pattern.compile(regex);</span>
+
+<span class="fc" id="L60">        Matcher matcher = pattern.matcher(email);</span>
+
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (!matcher.matches()) {</span>
+<span class="fc" id="L63">            return false;</span>
+        }
+
+<span class="fc" id="L66">        return true;</span>
+    }
+
+    public Boolean verifyAdmin(String admin) {
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">        if (admin.equals(&quot;true&quot;) || admin.equals(&quot;false&quot;)) {</span>
+<span class="fc" id="L71">            return true;</span>
+        }
+<span class="fc" id="L73">        return false;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
