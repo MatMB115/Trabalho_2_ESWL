@@ -6,7 +6,7 @@
 <a href="https://github.com/MatMB115/Trabalho_2_ESWL/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MatMB115/Trabalho_2_ESWL">
   </a>
-<a href="https://github.com/MatMB115/Trabalho_2_ESWL/commits/main">
+<a href="https://app.codecov.io/gh/MatMB115/Trabalho_2_ESWL">
   <img alt="JaCoCo Coverage" src="https://img.shields.io/badge/coverage%E2%98%82-100%25-2304D361">
 </a>
 
