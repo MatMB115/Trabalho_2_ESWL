@@ -3,12 +3,15 @@
 
 <img alt="Repository size" src="https://img.shields.io/github/repo-size/MatMB115/Trabalho_2_ESWL">
 
-<a href="https://github.com/darlosss/repime/commits/main">
+<a href="https://github.com/MatMB115/Trabalho_2_ESWL/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MatMB115/Trabalho_2_ESWL">
   </a>
+<a href="https://github.com/MatMB115/Trabalho_2_ESWL/commits/main">
+  <img alt="JaCoCo Coverage" src="https://img.shields.io/badge/coverage%E2%98%82-100%25-2304D361">
+</a>
 
-<img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/MatMB115/Trabalho_2_ESWL/targazers">
+<img alt="License" src="https://img.shields.io/badge/License-GNU%20GPL-blue">
+   <a href="https://github.com/MatMB115/Trabalho_2_ESWL/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/MatMB115/Trabalho_2_ESWL?style=social">
   </a>
 </p>
